@@ -97,5 +97,3 @@ This project is provided as-is for educational and experimental use.
 ---
 
 If you have any questions or want to contribute, feel free to open issues or pull requests.
-
-```
