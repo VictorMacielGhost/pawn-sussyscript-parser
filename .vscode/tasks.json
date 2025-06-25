@@ -1,0 +1,37 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Sussy Parser",
+            "type": "process",
+            "command": "cmd",
+            "args": [
+                "/c",
+                "c:\\Program Files (x86)\\Dev-Cpp\\MinGW64\\bin\\gcc.exe",
+                "-std=c99",
+                "-g",
+                "-o",
+                "${workspaceFolder}\\build\\pawn-sussy-parser.exe",
+                "${workspaceFolder}\\src\\main.c"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Run Sussy Parser",
+            "type": "process",
+            "command": "${workspaceFolder}\\build\\pawn-sussy-parser.exe",
+            "args": [],
+            "group": {
+                "kind": "test",
+                "isDefault": false
+            },
+            "problemMatcher": []
+        }
+    ]
+}
