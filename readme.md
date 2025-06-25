@@ -1,4 +1,3 @@
-```markdown
 # Pawn SussyScript Parser
 
 This project is a simple command-line tool written in C that converts Pawn source code into its "SussyScript" variant by replacing predefined keywords and function names. It helps developers switch between normal Pawn syntax and the SussyScript syntax easily.
@@ -6,6 +5,8 @@ This project is a simple command-line tool written in C that converts Pawn sourc
 ---
 
 ## Project Structure
+
+```
 
 C:.
 ├── .vscode
@@ -17,6 +18,8 @@ C:.
 │   └── sussy.pwn            # Example output file in SussyScript syntax
 └── src
 └── main.c               # Source code of the parser tool
+
+````
 
 ---
 
@@ -38,7 +41,9 @@ This parser automates the conversion between normal Pawn code and SussyScript sy
 
 Use your preferred C compiler (e.g., `gcc` or `clang`) to compile the source:
 
+```bash
 gcc -o build/pawn-sussy-parser.exe src/main.c
+````
 
 Or use the provided VSCode task (`.vscode/tasks.json`) to build easily.
 
@@ -48,8 +53,9 @@ Or use the provided VSCode task (`.vscode/tasks.json`) to build easily.
 
 Run the parser from the command line:
 
+```bash
 pawn-sussy-parser.exe --in path/to/input.pwn --out path/to/output.sus [--debug]
-
+```
 
 ### Arguments:
 
@@ -68,7 +74,9 @@ pawn-sussy-parser.exe --in path/to/input.pwn --out path/to/output.sus [--debug]
 
 Convert `scripts/pawn.pwn` into SussyScript with debug log:
 
+```bash
 pawn-sussy-parser.exe --in scripts/pawn.pwn --out scripts/sussy.pwn --debug
+```
 
 The output will be saved as `scripts/sussy.pwn`, and detailed logs will be in `log.txt`.
 
