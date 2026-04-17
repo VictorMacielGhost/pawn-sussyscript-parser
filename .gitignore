@@ -1,0 +1,15 @@
+# Debug files
+log.txt
+
+# IDE
+.vs/
+*.code-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*~
+*.tmp
+*.bak

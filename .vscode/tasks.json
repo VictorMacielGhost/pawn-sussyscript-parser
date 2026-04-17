@@ -7,12 +7,14 @@
             "command": "cmd",
             "args": [
                 "/c",
-                "c:\\Program Files (x86)\\Dev-Cpp\\MinGW64\\bin\\gcc.exe",
+                "c:\\TDM-GCC-64\\bin\\gcc.exe",
                 "-std=c99",
                 "-g",
+                "-I${workspaceFolder}\\src\\vendor\\lua\\src",
                 "-o",
                 "${workspaceFolder}\\build\\pawn-sussy-parser.exe",
-                "${workspaceFolder}\\src\\main.c"
+                "${workspaceFolder}\\src\\main.c",
+                "@${workspaceFolder}\\src\\lua_sources.txt",
             ],
             "group": {
                 "kind": "build",

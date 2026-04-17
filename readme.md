@@ -84,9 +84,10 @@ The output will be saved as `scripts/sussy.pwn`, and detailed logs will be in `l
 
 ## Notes
 
-* The parser performs simple textual replacements and may not handle complex syntax nuances.
-* Debug mode helps trace replacement operations and identify issues.
-* Adjust the mappings in `src/main.c` to add or change keyword substitutions.
+* The parser uses word boundary detection to avoid replacing keywords within identifiers (e.g., "if" won't match inside "Different")
+* Debug mode helps trace replacement operations and identify issues
+* Adjust the mappings in `src/main.c` to add or change keyword substitutions
+* The Lua script (`build/main.lua`) can be extended to programmatically modify mappings at runtime
 
 ---
 
