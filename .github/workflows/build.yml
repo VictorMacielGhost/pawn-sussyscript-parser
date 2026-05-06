@@ -1,0 +1,27 @@
+name: Build Linux Binary
+
+on:
+  push:
+    branches: ["main", "master"]
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install GCC
+        run: sudo apt update && sudo apt install -y build-essential
+
+      - name: Compile
+        run: gcc -Isrc/vendor/lua/src src/main.c @src/lua_sources.txt -o luac -static -O2 -std=c99 -lm
+
+      - name: Upload binary
+        uses: actions/upload-artifact@v4
+        with:
+          name: luac-linux
+          path: luac
+
+          
